@@ -1,0 +1,1864 @@
+[
+  {
+    "id": 3519815,
+    "band": "high",
+    "score": 0.9996,
+    "amount": 175,
+    "shap": [
+      {
+        "feature": "V258",
+        "shap_value": 1.7746914369541553,
+        "value": 7,
+        "percentile_in_train": 98.8
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.0630981340955044,
+        "value": 11,
+        "percentile_in_train": 100
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.8810312685696587,
+        "value": 11,
+        "percentile_in_train": 93
+      },
+      {
+        "feature": "C14",
+        "shap_value": 0.7422930587314902,
+        "value": 0,
+        "percentile_in_train": 0
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.6994292851604844,
+        "value": 11,
+        "percentile_in_train": 100
+      }
+    ],
+    "verdict": "fraud",
+    "confidence": 0.8,
+    "pattern": "synthetic_identity",
+    "evidence": [
+      "ML risk score 0.9996 indicates high fraud likelihood",
+      "Top SHAP risk factors V156, V149, V258, C1 all in top percentiles (≥93%)",
+      "No prior transactions for this proxy account, so no legitimate history",
+      "DeviceInfo 'Windows' and DeviceType 'desktop' are generic but linked to 43k transactions, 6.5% confirmed fraud among linked",
+      "Email domains gmail.com for both payer and receiver, common but not suspicious"
+    ],
+    "action": "decline_and_flag",
+    "summary": "The transaction shows extreme risk factors and a near‑certain ML score, with no prior activity for the card+address proxy. Device and email data are generic but linked to a sizable fraud share. Decline and flag for further investigation.",
+    "limitations": "Lack of prior account history and generic device info limit certainty; linked transactions share device string but many unrelated users; no additional linked attributes (card_other_address, address_other_cards) were examined",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 175,
+          "ProductCD": "R",
+          "card1": 7381,
+          "card2": 583,
+          "card3": 150,
+          "card4": "mastercard",
+          "card5": 102,
+          "card6": "credit",
+          "addr1": 343,
+          "addr2": 87,
+          "dist1": null,
+          "P_emaildomain": "gmail.com",
+          "R_emaildomain": "gmail.com",
+          "DeviceType": "desktop",
+          "DeviceInfo": "Windows",
+          "id_30": null,
+          "id_31": "edge 16.0",
+          "day_index": 162,
+          "hour_of_day": 14
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 0,
+          "note": "No earlier transactions for this proxy account (card1 + addr1). First sighting."
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "device_info"
+        },
+        "output": {
+          "link_type": "device_info",
+          "linked_transactions": 43124,
+          "distinct_accounts": 9371,
+          "share_of_all_prior_transactions_pct": 8.094,
+          "earliest_days_ago": 161.59,
+          "labeled_linked_transactions": 41959,
+          "confirmed_fraud_among_labeled": 2710,
+          "note": "Generic values (e.g. a common device string) link many unrelated users. Weigh the share of all transactions, not just the count."
+        }
+      }
+    ],
+    "truth": 1
+  },
+  {
+    "id": 3540433,
+    "band": "high",
+    "score": 0.9993,
+    "amount": 54.225,
+    "shap": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": 1.8722888887009317,
+        "type": "categorical"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.3759328087421752,
+        "value": 85,
+        "percentile_in_train": 96.1
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.048507457939622,
+        "value": 3,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.8195810024764213,
+        "value": 7,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.43076142926441546,
+        "value": 54,
+        "percentile_in_train": 99.6
+      }
+    ],
+    "verdict": "fraud",
+    "confidence": 0.8,
+    "pattern": "unclear",
+    "evidence": [
+      "DeviceInfo SHAP value 1.87 indicates strong fraud signal",
+      "Device_info link shows 23 of 36 labeled linked transactions confirmed fraud (≈64%)",
+      "Top risk factors C1, V258, V45, C12 all in top 5% of training distribution",
+      "ML risk score 0.9993 strongly suggests fraud"
+    ],
+    "action": "decline_and_flag",
+    "summary": "The transaction exhibits multiple high‑risk features and a near‑perfect ML score. DeviceInfo is a strong fraud indicator, corroborated by a high fraud rate among linked transactions. No prior activity for this account limits context, but the evidence points to fraud. Flag and decline the transaction.",
+    "limitations": "No prior transactions for this proxy account; device string is common and may link unrelated users; email domains are generic",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 54.225,
+          "ProductCD": "C",
+          "card1": 9633,
+          "card2": 130,
+          "card3": 185,
+          "card4": "visa",
+          "card5": 138,
+          "card6": "debit",
+          "addr1": null,
+          "addr2": null,
+          "dist1": null,
+          "P_emaildomain": "gmail.com",
+          "R_emaildomain": "gmail.com",
+          "DeviceType": "mobile",
+          "DeviceInfo": "SM-G920P Build/NRD90M",
+          "id_30": null,
+          "id_31": "chrome 66.0 for android",
+          "day_index": 169,
+          "hour_of_day": 4
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 0,
+          "note": "No earlier transactions for this proxy account (card1 + addr1). First sighting."
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "device_info"
+        },
+        "output": {
+          "link_type": "device_info",
+          "linked_transactions": 47,
+          "distinct_accounts": 12,
+          "share_of_all_prior_transactions_pct": 0.008,
+          "earliest_days_ago": 162.09,
+          "labeled_linked_transactions": 36,
+          "confirmed_fraud_among_labeled": 23,
+          "note": "Generic values (e.g. a common device string) link many unrelated users. Weigh the share of all transactions, not just the count."
+        }
+      }
+    ],
+    "truth": 1
+  },
+  {
+    "id": 3519799,
+    "band": "high",
+    "score": 0.9993,
+    "amount": 175,
+    "shap": [
+      {
+        "feature": "V258",
+        "shap_value": 1.9326234100598243,
+        "value": 5,
+        "percentile_in_train": 98.2
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.0659847672856213,
+        "value": 10,
+        "percentile_in_train": 100
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.8135137971903926,
+        "value": 10,
+        "percentile_in_train": 92.5
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7180671031467517,
+        "value": 10,
+        "percentile_in_train": 100
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.694759550025432,
+        "value": 0,
+        "percentile_in_train": 0
+      }
+    ],
+    "verdict": "needs_human_review",
+    "confidence": 0.6,
+    "pattern": "unclear",
+    "evidence": [
+      "ML risk score 0.9993 and top SHAP values from V156, V149, V258, C1, C13 indicate unusually high feature values (percentiles 92.5–100)",
+      "DeviceInfo 'Windows' links to 43,113 prior transactions, 8.1% share of all prior transactions, with 6.5% confirmed fraud among labeled linked transactions, but the string is generic and may connect unrelated users",
+      "Account history shows 54 prior transactions, none confirmed fraud, 7.8 days since last, amount 175 below mean but within typical range",
+      "Distinct devices 6 and distinct purchaser emails 10 suggest moderate diversity but not extreme",
+      "No confirmed fraud in recent transactions or account history"
+    ],
+    "action": "escalate_to_analyst",
+    "summary": "The transaction has an extremely high ML risk score and several features at the top of their training distribution, yet the account history shows no prior fraud and the device link is generic. A human analyst should review the transaction details, especially the meaning of the high-value features and any additional contextual data.",
+    "limitations": "Feature names are anonymized; cannot determine what V156, V149, etc. measure. DeviceInfo is generic, so link may be spurious. Email domains are common and may be attacker-controlled. Fraud labels are delayed; zero confirmed fraud does not guarantee clean link.",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 175,
+          "ProductCD": "R",
+          "card1": 7381,
+          "card2": 583,
+          "card3": 150,
+          "card4": "mastercard",
+          "card5": 102,
+          "card6": "credit",
+          "addr1": 126,
+          "addr2": 87,
+          "dist1": null,
+          "P_emaildomain": "gmail.com",
+          "R_emaildomain": "gmail.com",
+          "DeviceType": "desktop",
+          "DeviceInfo": "Windows",
+          "id_30": null,
+          "id_31": "edge 16.0",
+          "day_index": 162,
+          "hour_of_day": 14
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 54,
+          "days_since_last": 7.77,
+          "amount_mean": 416.12,
+          "amount_median": 197,
+          "amount_max": 1129.95,
+          "this_amount_vs_mean": 0.42,
+          "distinct_devices": 6,
+          "distinct_purchaser_emails": 10,
+          "labeled_prior_transactions": 54,
+          "confirmed_fraud_among_labeled": 0,
+          "recent_transactions": [
+            {
+              "days_ago": 7.77,
+              "amount": 311.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 15.67,
+              "amount": 150,
+              "product": "R",
+              "device_type": "desktop",
+              "p_email": "aol.com"
+            },
+            {
+              "days_ago": 18.78,
+              "amount": 100,
+              "product": "R",
+              "device_type": "mobile",
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 22.73,
+              "amount": 568.9,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 26.41,
+              "amount": 944,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 28.47,
+              "amount": 932,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 31.47,
+              "amount": 874,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 32.95,
+              "amount": 884,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 33.58,
+              "amount": 884,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 34.99,
+              "amount": 100,
+              "product": "R",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 35.42,
+              "amount": 864,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 36.01,
+              "amount": 944,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 36.01,
+              "amount": 944,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 36.53,
+              "amount": 944,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 37.61,
+              "amount": 914,
+              "product": "W",
+              "device_type": null,
+              "p_email": "comcast.net"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "device_info"
+        },
+        "output": {
+          "link_type": "device_info",
+          "linked_transactions": 43113,
+          "distinct_accounts": 9369,
+          "share_of_all_prior_transactions_pct": 8.092,
+          "earliest_days_ago": 161.58,
+          "labeled_linked_transactions": 41953,
+          "confirmed_fraud_among_labeled": 2710,
+          "note": "Generic values (e.g. a common device string) link many unrelated users. Weigh the share of all transactions, not just the count."
+        }
+      }
+    ],
+    "truth": 1
+  },
+  {
+    "id": 3519759,
+    "band": "high",
+    "score": 0.9993,
+    "amount": 450,
+    "shap": [
+      {
+        "feature": "V156",
+        "shap_value": 1.4642790964785517,
+        "value": 7,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.8388152985810254,
+        "value": 0,
+        "percentile_in_train": 0
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7515996668947023,
+        "value": 7,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "V258",
+        "shap_value": 0.737752309327906,
+        "value": 2,
+        "percentile_in_train": 87.2
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.6874785548157492,
+        "value": 450,
+        "percentile_in_train": 95.5
+      }
+    ],
+    "verdict": "needs_human_review",
+    "confidence": 0.65,
+    "pattern": "unclear",
+    "evidence": [
+      "V156 value 7.0 (99.9th percentile) and high SHAP 1.46 pushes toward fraud",
+      "V149 value 7.0 (99.9th percentile) with SHAP 0.75",
+      "C13 value 0.0 (0th percentile) with SHAP 0.84",
+      "Transaction amount 450.0 is 3.9× the account mean and 95.5th percentile in training",
+      "Account history shows 15 prior transactions, no confirmed fraud, last activity 3.8 days ago, but amount 450 is far above prior max 204.97",
+      "Device string “Windows” links to 43,113 prior transactions, 8.1% share of all prior, with 2,710 confirmed frauds among labeled, indicating device is common but has fraud activity"
+    ],
+    "action": "escalate_to_analyst",
+    "summary": "The transaction has several high-risk SHAP features and a large amount relative to the account’s history, yet the account has no prior fraud and the device string is common. The evidence is inconclusive, so a human analyst should review the case.",
+    "limitations": "Feature meanings unknown; device string common; email domain generic; no confirmed fraud on account; ML score high but evidence mixed",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 450,
+          "ProductCD": "R",
+          "card1": 11690,
+          "card2": 111,
+          "card3": 150,
+          "card4": "visa",
+          "card5": 226,
+          "card6": "credit",
+          "addr1": 476,
+          "addr2": 87,
+          "dist1": null,
+          "P_emaildomain": "gmail.com",
+          "R_emaildomain": "gmail.com",
+          "DeviceType": "desktop",
+          "DeviceInfo": "Windows",
+          "id_30": "Windows 10",
+          "id_31": "edge 16.0",
+          "day_index": 162,
+          "hour_of_day": 13
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 15,
+          "days_since_last": 3.76,
+          "amount_mean": 115.49,
+          "amount_median": 107.95,
+          "amount_max": 204.97,
+          "this_amount_vs_mean": 3.9,
+          "distinct_devices": 2,
+          "distinct_purchaser_emails": 2,
+          "labeled_prior_transactions": 14,
+          "confirmed_fraud_among_labeled": 0,
+          "recent_transactions": [
+            {
+              "days_ago": 3.76,
+              "amount": 100,
+              "product": "R",
+              "device_type": "desktop",
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 9.62,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 24.65,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 38.63,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 52.63,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 66.61,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 80.59,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 94.61,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 94.75,
+              "amount": 92.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 109.09,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 123.11,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 140.07,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 150.63,
+              "amount": 50,
+              "product": "H",
+              "device_type": "desktop",
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 156.62,
+              "amount": 204.97,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 157.09,
+              "amount": 204.97,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "device_info"
+        },
+        "output": {
+          "link_type": "device_info",
+          "linked_transactions": 43113,
+          "distinct_accounts": 9368,
+          "share_of_all_prior_transactions_pct": 8.092,
+          "earliest_days_ago": 161.57,
+          "labeled_linked_transactions": 41957,
+          "confirmed_fraud_among_labeled": 2710,
+          "note": "Generic values (e.g. a common device string) link many unrelated users. Weigh the share of all transactions, not just the count."
+        }
+      }
+    ],
+    "truth": 1
+  },
+  {
+    "id": 3545361,
+    "band": "high",
+    "score": 0.9993,
+    "amount": 300,
+    "shap": [
+      {
+        "feature": "V258",
+        "shap_value": 1.9962809512297017,
+        "value": 5,
+        "percentile_in_train": 98.2
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.0733918278794785,
+        "value": 4,
+        "percentile_in_train": 99.6
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7560584312891139,
+        "value": 5,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.6450019255491686,
+        "value": 300,
+        "percentile_in_train": 90.7
+      },
+      {
+        "feature": "id_30",
+        "shap_value": -0.597045651407988,
+        "type": "categorical"
+      }
+    ],
+    "verdict": "fraud",
+    "confidence": 0.75,
+    "pattern": "account_takeover",
+    "evidence": [
+      "ML risk score 0.9993 with top SHAP contributions from V258 (1.996), V156 (1.073), V149 (0.756) indicating strong fraud signal",
+      "Account history shows 4 confirmed frauds among 82 labeled prior transactions (≈4.9%) and 88 total prior transactions, indicating a history of fraud activity",
+      "Device link analysis reveals 1143 confirmed frauds among 18,493 labeled linked transactions (≈6.2%) despite generic device string, suggesting device is associated with fraud activity",
+      "Transaction uses multiple devices (7 distinct) and emails (7 distinct) and occurs only 1.08 days after previous activity, consistent with account takeover patterns"
+    ],
+    "action": "hold_and_verify_identity",
+    "summary": "The transaction exhibits a very high ML risk score and strong SHAP signals from multiple high‑value features. Historical account activity includes confirmed fraud and the device is linked to a non‑negligible fraud rate. Given the evidence, the transaction is likely fraudulent, possibly due to account takeover, and should be held for identity verification.",
+    "limitations": "Anonymized features (V258, V156, V149) are unknown, device string is generic and may link unrelated users, email domains match prior activity, fraud labels are delayed and may not reflect current status",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 300,
+          "ProductCD": "R",
+          "card1": 2616,
+          "card2": 327,
+          "card3": 150,
+          "card4": "discover",
+          "card5": 102,
+          "card6": "credit",
+          "addr1": 472,
+          "addr2": 87,
+          "dist1": null,
+          "P_emaildomain": "gmail.com",
+          "R_emaildomain": "gmail.com",
+          "DeviceType": "mobile",
+          "DeviceInfo": "iOS Device",
+          "id_30": "iOS 11.3.0",
+          "id_31": "mobile safari 11.0",
+          "day_index": 170,
+          "hour_of_day": 23
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 88,
+          "days_since_last": 1.08,
+          "amount_mean": 359.14,
+          "amount_median": 203,
+          "amount_max": 2079.95,
+          "this_amount_vs_mean": 0.84,
+          "distinct_devices": 7,
+          "distinct_purchaser_emails": 7,
+          "labeled_prior_transactions": 82,
+          "confirmed_fraud_among_labeled": 4,
+          "recent_transactions": [
+            {
+              "days_ago": 1.08,
+              "amount": 171,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 1.38,
+              "amount": 335,
+              "product": "W",
+              "device_type": null,
+              "p_email": "hotmail.com"
+            },
+            {
+              "days_ago": 2.14,
+              "amount": 259.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "hotmail.com"
+            },
+            {
+              "days_ago": 4.13,
+              "amount": 117,
+              "product": "W",
+              "device_type": null,
+              "p_email": "hotmail.com"
+            },
+            {
+              "days_ago": 4.3,
+              "amount": 1679.05,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 6.23,
+              "amount": 50,
+              "product": "R",
+              "device_type": "desktop",
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 9.29,
+              "amount": 780.38,
+              "product": "W",
+              "device_type": null,
+              "p_email": "aol.com"
+            },
+            {
+              "days_ago": 10.17,
+              "amount": 117,
+              "product": "W",
+              "device_type": null,
+              "p_email": "hotmail.com"
+            },
+            {
+              "days_ago": 23.04,
+              "amount": 548.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "hotmail.com"
+            },
+            {
+              "days_ago": 28.99,
+              "amount": 226,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 29.02,
+              "amount": 226,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 38.1,
+              "amount": 374,
+              "product": "W",
+              "device_type": null,
+              "p_email": "verizon.net"
+            },
+            {
+              "days_ago": 38.43,
+              "amount": 200,
+              "product": "R",
+              "device_type": "mobile",
+              "p_email": "hotmail.com"
+            },
+            {
+              "days_ago": 45.26,
+              "amount": 189.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 46.35,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": null
+            }
+          ]
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "device_info"
+        },
+        "output": {
+          "link_type": "device_info",
+          "linked_transactions": 19115,
+          "distinct_accounts": 6690,
+          "share_of_all_prior_transactions_pct": 3.423,
+          "earliest_days_ago": 169.98,
+          "labeled_linked_transactions": 18493,
+          "confirmed_fraud_among_labeled": 1143,
+          "note": "Generic values (e.g. a common device string) link many unrelated users. Weigh the share of all transactions, not just the count."
+        }
+      }
+    ],
+    "truth": 1
+  },
+  {
+    "id": 3551405,
+    "band": "medium",
+    "score": 0.471,
+    "amount": 117,
+    "shap": [
+      {
+        "feature": "card6",
+        "shap_value": 0.634353856477613,
+        "type": "categorical"
+      },
+      {
+        "feature": "card4",
+        "shap_value": 0.3628510069356353,
+        "type": "categorical"
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.30109502916251946,
+        "value": 1,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "M5",
+        "shap_value": 0.28406408795891547,
+        "type": "categorical"
+      },
+      {
+        "feature": "M6",
+        "shap_value": -0.25925480141013385,
+        "type": "categorical"
+      }
+    ],
+    "verdict": "needs_human_review",
+    "confidence": 0.6,
+    "pattern": "unclear",
+    "evidence": [
+      "SHAP indicates strong positive contributions from card6 (credit) and card4 (discover), and a low‑percentile C13 value (6.1%)",
+      "Account history shows 5 confirmed frauds among 153 labeled prior transactions (≈3.3% fraud rate) and 10 distinct devices, 13 distinct purchaser emails",
+      "Recent transaction history includes a 117 USD purchase 1.31 days ago with the same product but a different email, and a 171 USD purchase 3.42 days ago with the same email (gmail.com)",
+      "DeviceInfo is null, so no device linkage; email domain gmail.com is common but reused across multiple prior transactions"
+    ],
+    "action": "hold_and_verify_identity",
+    "summary": "The transaction shows several high‑risk SHAP features and a modest fraud rate in the account’s history, but also shares characteristics with recent legitimate activity. No device linkage is available, and the email domain is common. A manual review is warranted to confirm identity and assess the transaction’s legitimacy.",
+    "limitations": "No device linkage, limited fraud label coverage, and the transaction’s features (e.g., card type) are not uniquely indicative of fraud",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 117,
+          "ProductCD": "W",
+          "card1": 2616,
+          "card2": 327,
+          "card3": 150,
+          "card4": "discover",
+          "card5": 102,
+          "card6": "credit",
+          "addr1": 126,
+          "addr2": 87,
+          "dist1": null,
+          "P_emaildomain": "gmail.com",
+          "R_emaildomain": null,
+          "DeviceType": null,
+          "DeviceInfo": null,
+          "id_30": null,
+          "id_31": null,
+          "day_index": 173,
+          "hour_of_day": 0
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 158,
+          "days_since_last": 0.2,
+          "amount_mean": 326.03,
+          "amount_median": 185.5,
+          "amount_max": 2832.95,
+          "this_amount_vs_mean": 0.36,
+          "distinct_devices": 10,
+          "distinct_purchaser_emails": 13,
+          "labeled_prior_transactions": 153,
+          "confirmed_fraud_among_labeled": 5,
+          "recent_transactions": [
+            {
+              "days_ago": 0.2,
+              "amount": 1826,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 1.31,
+              "amount": 117,
+              "product": "W",
+              "device_type": null,
+              "p_email": "ymail.com"
+            },
+            {
+              "days_ago": 2.24,
+              "amount": 1331,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 3.42,
+              "amount": 171,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 5.19,
+              "amount": 129.97,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 7.26,
+              "amount": 125,
+              "product": "H",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 12.41,
+              "amount": 2832.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "optonline.net"
+            },
+            {
+              "days_ago": 13.18,
+              "amount": 171,
+              "product": "W",
+              "device_type": null,
+              "p_email": "ptd.net"
+            },
+            {
+              "days_ago": 14.22,
+              "amount": 166.99,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 17.24,
+              "amount": 150,
+              "product": "R",
+              "device_type": "desktop",
+              "p_email": "aol.com"
+            },
+            {
+              "days_ago": 20.25,
+              "amount": 1632.88,
+              "product": "W",
+              "device_type": null,
+              "p_email": null
+            },
+            {
+              "days_ago": 20.75,
+              "amount": 49,
+              "product": "W",
+              "device_type": null,
+              "p_email": "verizon.net"
+            },
+            {
+              "days_ago": 23.9,
+              "amount": 55,
+              "product": "H",
+              "device_type": "desktop",
+              "p_email": "comcast.net"
+            },
+            {
+              "days_ago": 24.03,
+              "amount": 100,
+              "product": "R",
+              "device_type": "mobile",
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 26.47,
+              "amount": 362.47,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "device_info"
+        },
+        "output": {
+          "note": "This transaction has no DeviceInfo, so it can't be linked by device."
+        }
+      }
+    ],
+    "truth": 0
+  },
+  {
+    "id": 3511930,
+    "band": "medium",
+    "score": 0.4714,
+    "amount": 171,
+    "shap": [
+      {
+        "feature": "card6",
+        "shap_value": 0.5746574211084055,
+        "type": "categorical"
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.36276553862072985,
+        "value": 171,
+        "percentile_in_train": 80.9
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.3042642670390481,
+        "value": 1,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.30303238117110487,
+        "type": "categorical"
+      },
+      {
+        "feature": "M5",
+        "shap_value": -0.2222431665412251,
+        "type": "categorical"
+      }
+    ],
+    "verdict": "needs_human_review",
+    "confidence": 0.6,
+    "pattern": "unclear",
+    "evidence": [
+      "Transaction has no device or email, which is unusual but not unprecedented for this account (18 distinct devices, 17 distinct emails in prior history).",
+      "Account has 781 prior transactions with 27 confirmed fraud (3.6% fraud rate); linked card_other_address transactions show 236 fraud among 5891 labeled (4% fraud rate).",
+      "Top risk factors: card6 credit, transaction amount 171 (80.9th percentile), C13 low (6.1th percentile), P_emaildomain gmail.com; these push risk but are not extreme. The ML risk score 0.47 is moderate."
+    ],
+    "action": "hold_and_verify_identity",
+    "summary": "The transaction is from a known account with moderate fraud history. The lack of device/email data is atypical but not impossible. Risk score is moderate and top risk factors are not extreme. Human review is recommended to confirm legitimacy.",
+    "limitations": "No device or email data for this transaction; fraud label for this transaction is not available; device info missing may hide device-based fraud patterns.",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 171,
+          "ProductCD": "W",
+          "card1": 15066,
+          "card2": 170,
+          "card3": 150,
+          "card4": "mastercard",
+          "card5": 102,
+          "card6": "credit",
+          "addr1": 325,
+          "addr2": 87,
+          "dist1": null,
+          "P_emaildomain": "gmail.com",
+          "R_emaildomain": null,
+          "DeviceType": null,
+          "DeviceInfo": null,
+          "id_30": null,
+          "id_31": null,
+          "day_index": 159,
+          "hour_of_day": 18
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 781,
+          "days_since_last": 0.01,
+          "amount_mean": 201.16,
+          "amount_median": 107,
+          "amount_max": 3232.48,
+          "this_amount_vs_mean": 0.85,
+          "distinct_devices": 18,
+          "distinct_purchaser_emails": 17,
+          "labeled_prior_transactions": 749,
+          "confirmed_fraud_among_labeled": 27,
+          "recent_transactions": [
+            {
+              "days_ago": 0.01,
+              "amount": 59,
+              "product": "W",
+              "device_type": null,
+              "p_email": null
+            },
+            {
+              "days_ago": 0.32,
+              "amount": 49,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 0.81,
+              "amount": 141,
+              "product": "W",
+              "device_type": null,
+              "p_email": null
+            },
+            {
+              "days_ago": 0.82,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 0.95,
+              "amount": 554,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 1.13,
+              "amount": 134,
+              "product": "W",
+              "device_type": null,
+              "p_email": "anonymous.com"
+            },
+            {
+              "days_ago": 1.15,
+              "amount": 226,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 1.91,
+              "amount": 29,
+              "product": "H",
+              "device_type": "mobile",
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 1.95,
+              "amount": 50,
+              "product": "H",
+              "device_type": "mobile",
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 2.03,
+              "amount": 171,
+              "product": "W",
+              "device_type": null,
+              "p_email": null
+            },
+            {
+              "days_ago": 2.77,
+              "amount": 196,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 2.93,
+              "amount": 186,
+              "product": "W",
+              "device_type": null,
+              "p_email": "aol.com"
+            },
+            {
+              "days_ago": 3.04,
+              "amount": 335,
+              "product": "W",
+              "device_type": null,
+              "p_email": "aol.com"
+            },
+            {
+              "days_ago": 4.06,
+              "amount": 994.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 4.69,
+              "amount": 54.99,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "card_other_address"
+        },
+        "output": {
+          "link_type": "card_other_address",
+          "linked_transactions": 6114,
+          "distinct_accounts": 60,
+          "share_of_all_prior_transactions_pct": 1.165,
+          "earliest_days_ago": 158.72,
+          "labeled_linked_transactions": 5891,
+          "confirmed_fraud_among_labeled": 236,
+          "note": "Generic values (e.g. a common device string) link many unrelated users. Weigh the share of all transactions, not just the count."
+        }
+      }
+    ],
+    "truth": 0
+  },
+  {
+    "id": 3536239,
+    "band": "medium",
+    "score": 0.389,
+    "amount": 97,
+    "shap": [
+      {
+        "feature": "D2",
+        "shap_value": 0.6157903916148089,
+        "value": 2,
+        "percentile_in_train": 7.4
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.5060819931932476,
+        "value": 1,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "V70",
+        "shap_value": 0.28002356076835655,
+        "value": 0,
+        "percentile_in_train": 0
+      },
+      {
+        "feature": "card5",
+        "shap_value": -0.18938762368555118,
+        "value": 229,
+        "percentile_in_train": 99.6
+      },
+      {
+        "feature": "V62",
+        "shap_value": 0.18005386166109916,
+        "value": 2,
+        "percentile_in_train": 95.8
+      }
+    ],
+    "verdict": "legitimate",
+    "confidence": 0.7,
+    "pattern": "none",
+    "evidence": [
+      "Account history shows 4 prior transactions with same card and address, all legitimate and within similar amount range; no new device or email used.",
+      "Linked transactions via same card but different address show 96 prior links, none confirmed fraud, and share of all prior transactions is only 1.7%.",
+      "SHAP risk factors D2, C13, V70, V62 are positive but correspond to low percentile values that are not supported by transaction history or new patterns."
+    ],
+    "action": "approve",
+    "summary": "The transaction matches prior legitimate activity on the same card and address, with no new device or email. Linked card activity shows no fraud. SHAP risk factors are not corroborated by history. Approve the transaction.",
+    "limitations": "Device and email domain fields are null, limiting detection of new device or email patterns; fraud labels are delayed, so absence of confirmed fraud does not guarantee legitimacy.",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 97,
+          "ProductCD": "W",
+          "card1": 12318,
+          "card2": 206,
+          "card3": 150,
+          "card4": "mastercard",
+          "card5": 229,
+          "card6": "debit",
+          "addr1": 264,
+          "addr2": 87,
+          "dist1": null,
+          "P_emaildomain": "yahoo.com",
+          "R_emaildomain": null,
+          "DeviceType": null,
+          "DeviceInfo": null,
+          "id_30": null,
+          "id_31": null,
+          "day_index": 167,
+          "hour_of_day": 20
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 4,
+          "days_since_last": 2.04,
+          "amount_mean": 70.97,
+          "amount_median": 59,
+          "amount_max": 107.95,
+          "this_amount_vs_mean": 1.37,
+          "distinct_devices": 0,
+          "distinct_purchaser_emails": 1,
+          "labeled_prior_transactions": 3,
+          "confirmed_fraud_among_labeled": 0,
+          "recent_transactions": [
+            {
+              "days_ago": 2.04,
+              "amount": 59,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 73.06,
+              "amount": 59,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 85.46,
+              "amount": 57.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 133.24,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": null
+            }
+          ]
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "card_other_address"
+        },
+        "output": {
+          "link_type": "card_other_address",
+          "linked_transactions": 96,
+          "distinct_accounts": 13,
+          "share_of_all_prior_transactions_pct": 0.017,
+          "earliest_days_ago": 162.15,
+          "labeled_linked_transactions": 95,
+          "confirmed_fraud_among_labeled": 0,
+          "note": "Generic values (e.g. a common device string) link many unrelated users. Weigh the share of all transactions, not just the count."
+        }
+      }
+    ],
+    "truth": 0
+  },
+  {
+    "id": 3470621,
+    "band": "medium",
+    "score": 0.3619,
+    "amount": 117,
+    "shap": [
+      {
+        "feature": "card6",
+        "shap_value": 0.6287800301916224,
+        "type": "categorical"
+      },
+      {
+        "feature": "V294",
+        "shap_value": 0.48874007679176085,
+        "value": 3,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "V62",
+        "shap_value": 0.44261282388261614,
+        "value": 3,
+        "percentile_in_train": 99.5
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": -0.41696444801338606,
+        "type": "categorical"
+      },
+      {
+        "feature": "V283",
+        "shap_value": 0.2879567884912069,
+        "value": 8,
+        "percentile_in_train": 99.3
+      }
+    ],
+    "verdict": "needs_human_review",
+    "confidence": 0.55,
+    "pattern": "unclear",
+    "evidence": [
+      "Transaction amount 117 matches median of prior 26 transactions and is only 1.11× mean, indicating typical spending",
+      "Account history shows 26 prior transactions with no confirmed fraud and 19 labeled transactions all legitimate",
+      "No device or browser information; distinct devices count 0, device_type null, DeviceInfo null, suggesting no new device",
+      "Linked transactions via same card but different address show 68 links, 18 distinct accounts, but 0 confirmed fraud among 66 labeled, indicating no fraud pattern",
+      "SHAP top risk factors: card6=credit (positive), V294=3.0 (95.6th percentile), V62=3.0 (99.5th percentile), V283=8.0 (99.3rd percentile) all push toward fraud, but P_emaildomain=icloud.com has negative contribution, balancing risk"
+    ],
+    "action": "hold_and_verify_identity",
+    "summary": "The transaction aligns with prior legitimate activity and lacks device changes, yet several high‑value SHAP features suggest potential fraud. No confirmed fraud evidence exists, so a manual review is warranted. Verify identity before proceeding.",
+    "limitations": "Lack of device/browser data, no confirmed fraud in account or linked history, SHAP values alone cannot confirm fraud",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 117,
+          "ProductCD": "W",
+          "card1": 5985,
+          "card2": 170,
+          "card3": 150,
+          "card4": "mastercard",
+          "card5": 102,
+          "card6": "credit",
+          "addr1": 330,
+          "addr2": 87,
+          "dist1": 0,
+          "P_emaildomain": "icloud.com",
+          "R_emaildomain": null,
+          "DeviceType": null,
+          "DeviceInfo": null,
+          "id_30": null,
+          "id_31": null,
+          "day_index": 145,
+          "hour_of_day": 16
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 26,
+          "days_since_last": 5.83,
+          "amount_mean": 105.75,
+          "amount_median": 117,
+          "amount_max": 226,
+          "this_amount_vs_mean": 1.11,
+          "distinct_devices": 0,
+          "distinct_purchaser_emails": 3,
+          "labeled_prior_transactions": 19,
+          "confirmed_fraud_among_labeled": 0,
+          "recent_transactions": [
+            {
+              "days_ago": 5.83,
+              "amount": 29,
+              "product": "W",
+              "device_type": null,
+              "p_email": "icloud.com"
+            },
+            {
+              "days_ago": 5.92,
+              "amount": 59,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 5.92,
+              "amount": 97,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 6.8,
+              "amount": 117,
+              "product": "W",
+              "device_type": null,
+              "p_email": "hotmail.com"
+            },
+            {
+              "days_ago": 6.93,
+              "amount": 141,
+              "product": "W",
+              "device_type": null,
+              "p_email": "icloud.com"
+            },
+            {
+              "days_ago": 6.93,
+              "amount": 186,
+              "product": "W",
+              "device_type": null,
+              "p_email": "hotmail.com"
+            },
+            {
+              "days_ago": 6.94,
+              "amount": 226,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 14.81,
+              "amount": 117,
+              "product": "W",
+              "device_type": null,
+              "p_email": "icloud.com"
+            },
+            {
+              "days_ago": 14.81,
+              "amount": 141,
+              "product": "W",
+              "device_type": null,
+              "p_email": "icloud.com"
+            },
+            {
+              "days_ago": 21.09,
+              "amount": 88.5,
+              "product": "W",
+              "device_type": null,
+              "p_email": "icloud.com"
+            },
+            {
+              "days_ago": 21.09,
+              "amount": 98.5,
+              "product": "W",
+              "device_type": null,
+              "p_email": "icloud.com"
+            },
+            {
+              "days_ago": 21.09,
+              "amount": 108.5,
+              "product": "W",
+              "device_type": null,
+              "p_email": "icloud.com"
+            },
+            {
+              "days_ago": 21.1,
+              "amount": 117,
+              "product": "W",
+              "device_type": null,
+              "p_email": "hotmail.com"
+            },
+            {
+              "days_ago": 26.8,
+              "amount": 117,
+              "product": "W",
+              "device_type": null,
+              "p_email": "icloud.com"
+            },
+            {
+              "days_ago": 26.81,
+              "amount": 117,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "card_other_address"
+        },
+        "output": {
+          "link_type": "card_other_address",
+          "linked_transactions": 68,
+          "distinct_accounts": 18,
+          "share_of_all_prior_transactions_pct": 0.014,
+          "earliest_days_ago": 143.94,
+          "labeled_linked_transactions": 66,
+          "confirmed_fraud_among_labeled": 0,
+          "note": "Generic values (e.g. a common device string) link many unrelated users. Weigh the share of all transactions, not just the count."
+        }
+      }
+    ],
+    "truth": 0
+  },
+  {
+    "id": 3511148,
+    "band": "medium",
+    "score": 0.4843,
+    "amount": 44,
+    "shap": [
+      {
+        "feature": "C13",
+        "shap_value": -0.7435117239813677,
+        "value": 76,
+        "percentile_in_train": 94.3
+      },
+      {
+        "feature": "card1",
+        "shap_value": 0.671898228275637,
+        "value": 9500,
+        "percentile_in_train": 46.8
+      },
+      {
+        "feature": "C6",
+        "shap_value": 0.484165880815148,
+        "value": 12,
+        "percentile_in_train": 94.6
+      },
+      {
+        "feature": "card2",
+        "shap_value": 0.41280031584461196,
+        "value": 321,
+        "percentile_in_train": 36.3
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.3494086610347018,
+        "type": "categorical"
+      }
+    ],
+    "verdict": "needs_human_review",
+    "confidence": 0.55,
+    "pattern": "unclear",
+    "evidence": [
+      "Account has 1704 prior transactions with 105 confirmed fraud (≈6%) and recent activity within 12 hours, showing normal usage pattern for this proxy account.",
+      "Transaction uses yahoo.com email, which appears in many recent transactions (≥10) from the same account, matching prior behavior.",
+      "SHAP analysis: negative contribution from C13 (value 76, 94th percentile) offsets moderate positive contributions from card1, card2, C6, and email domain, resulting in a net risk score of 0.48.",
+      "DeviceInfo is null, so no device-based linkage can be made.",
+      "The transaction amount (44) is below the account mean (127) but within the typical range (median 59) and similar to recent amounts.",
+      "No other anomalous features (e.g., high dist1, unusual card type) are present."
+    ],
+    "action": "escalate_to_analyst",
+    "summary": "The transaction aligns with recent activity from the same proxy account and shares the same email domain, but the account has a moderate fraud history and the SHAP score is 0.48. The lack of device information limits linkage evidence. A human analyst should review the account’s recent fraud patterns and verify identity before deciding to approve or decline.",
+    "limitations": "DeviceInfo missing prevents device-based linkage; fraud labels are delayed and may not reflect current status; email domain could be attacker-controlled but matches prior usage; SHAP values provide relative risk but not absolute certainty.",
+    "tools": [
+      {
+        "tool": "get_transaction_details",
+        "input": {},
+        "output": {
+          "TransactionAmt": 44,
+          "ProductCD": "W",
+          "card1": 9500,
+          "card2": 321,
+          "card3": 150,
+          "card4": "visa",
+          "card5": 226,
+          "card6": "debit",
+          "addr1": 330,
+          "addr2": 87,
+          "dist1": 1,
+          "P_emaildomain": "yahoo.com",
+          "R_emaildomain": null,
+          "DeviceType": null,
+          "DeviceInfo": null,
+          "id_30": null,
+          "id_31": null,
+          "day_index": 159,
+          "hour_of_day": 12
+        }
+      },
+      {
+        "tool": "get_account_history",
+        "input": {
+          "limit": 15
+        },
+        "output": {
+          "prior_transactions": 1704,
+          "days_since_last": 0.47,
+          "amount_mean": 127.38,
+          "amount_median": 59,
+          "amount_max": 5278.95,
+          "this_amount_vs_mean": 0.35,
+          "distinct_devices": 15,
+          "distinct_purchaser_emails": 22,
+          "labeled_prior_transactions": 1630,
+          "confirmed_fraud_among_labeled": 105,
+          "recent_transactions": [
+            {
+              "days_ago": 0.47,
+              "amount": 49.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 0.52,
+              "amount": 47.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 0.63,
+              "amount": 107.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 0.72,
+              "amount": 206,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 0.77,
+              "amount": 82.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 0.84,
+              "amount": 29,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 0.85,
+              "amount": 100,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 0.85,
+              "amount": 171,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 0.88,
+              "amount": 29,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 0.94,
+              "amount": 335,
+              "product": "W",
+              "device_type": null,
+              "p_email": "yahoo.com"
+            },
+            {
+              "days_ago": 0.95,
+              "amount": 57.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 1.48,
+              "amount": 30.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": null
+            },
+            {
+              "days_ago": 1.65,
+              "amount": 77,
+              "product": "W",
+              "device_type": null,
+              "p_email": null
+            },
+            {
+              "days_ago": 1.97,
+              "amount": 50.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "gmail.com"
+            },
+            {
+              "days_ago": 2.64,
+              "amount": 82.95,
+              "product": "W",
+              "device_type": null,
+              "p_email": "msn.com"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "find_linked_transactions",
+        "input": {
+          "link_type": "device_info"
+        },
+        "output": {
+          "note": "This transaction has no DeviceInfo, so it can't be linked by device."
+        }
+      }
+    ],
+    "truth": 1
+  }
+]

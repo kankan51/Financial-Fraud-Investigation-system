@@ -1,0 +1,1860 @@
+[
+  {
+    "transaction_id": 3519815,
+    "band": "high",
+    "ml_risk_score": 0.9995567924676095,
+    "transaction_amount": 175.0,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.7746914369541553,
+        "value": 7.0,
+        "percentile_in_train": 98.8
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.0630981340955044,
+        "value": 11.0,
+        "percentile_in_train": 100.0
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.8810312685696587,
+        "value": 11.0,
+        "percentile_in_train": 93.0
+      },
+      {
+        "feature": "C14",
+        "shap_value": 0.7422930587314902,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.6994292851604844,
+        "value": 11.0,
+        "percentile_in_train": 100.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3540433,
+    "band": "high",
+    "ml_risk_score": 0.9993466483337946,
+    "transaction_amount": 54.225,
+    "top_risk_factors": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": 1.8722888887009317,
+        "type": "categorical"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.3759328087421752,
+        "value": 85.0,
+        "percentile_in_train": 96.1
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.048507457939622,
+        "value": 3.0,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.8195810024764213,
+        "value": 7.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.43076142926441546,
+        "value": 54.0,
+        "percentile_in_train": 99.6
+      }
+    ]
+  },
+  {
+    "transaction_id": 3519799,
+    "band": "high",
+    "ml_risk_score": 0.9993402437828895,
+    "transaction_amount": 175.0,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.9326234100598243,
+        "value": 5.0,
+        "percentile_in_train": 98.2
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.0659847672856213,
+        "value": 10.0,
+        "percentile_in_train": 100.0
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.8135137971903926,
+        "value": 10.0,
+        "percentile_in_train": 92.5
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7180671031467517,
+        "value": 10.0,
+        "percentile_in_train": 100.0
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.694759550025432,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3519759,
+    "band": "high",
+    "ml_risk_score": 0.9993312090069645,
+    "transaction_amount": 450.0,
+    "top_risk_factors": [
+      {
+        "feature": "V156",
+        "shap_value": 1.4642790964785517,
+        "value": 7.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.8388152985810254,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7515996668947023,
+        "value": 7.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "V258",
+        "shap_value": 0.737752309327906,
+        "value": 2.0,
+        "percentile_in_train": 87.2
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.6874785548157492,
+        "value": 450.0,
+        "percentile_in_train": 95.5
+      }
+    ]
+  },
+  {
+    "transaction_id": 3545361,
+    "band": "high",
+    "ml_risk_score": 0.9993021605001364,
+    "transaction_amount": 300.0,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.9962809512297017,
+        "value": 5.0,
+        "percentile_in_train": 98.2
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.0733918278794785,
+        "value": 4.0,
+        "percentile_in_train": 99.6
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7560584312891139,
+        "value": 5.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.6450019255491686,
+        "value": 300.0,
+        "percentile_in_train": 90.7
+      },
+      {
+        "feature": "id_30",
+        "shap_value": -0.597045651407988,
+        "type": "categorical"
+      }
+    ]
+  },
+  {
+    "transaction_id": 3519793,
+    "band": "high",
+    "ml_risk_score": 0.9992772455748494,
+    "transaction_amount": 175.0,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.777862136400786,
+        "value": 4.0,
+        "percentile_in_train": 97.4
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.2097652960811256,
+        "value": 9.0,
+        "percentile_in_train": 100.0
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.7612109058942449,
+        "value": 9.0,
+        "percentile_in_train": 91.9
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.735392329763263,
+        "value": 9.0,
+        "percentile_in_train": 100.0
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.6832692318003465,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3540438,
+    "band": "high",
+    "ml_risk_score": 0.9992732763280981,
+    "transaction_amount": 54.225,
+    "top_risk_factors": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": 1.7804556080756442,
+        "type": "categorical"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.4197473758099706,
+        "value": 86.0,
+        "percentile_in_train": 96.1
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.3702448564212932,
+        "value": 4.0,
+        "percentile_in_train": 97.4
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.8113235698479108,
+        "value": 8.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.35495288699237376,
+        "value": 54.0,
+        "percentile_in_train": 99.6
+      }
+    ]
+  },
+  {
+    "transaction_id": 3540434,
+    "band": "high",
+    "ml_risk_score": 0.9992732306797291,
+    "transaction_amount": 54.225,
+    "top_risk_factors": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": 1.9021844685619616,
+        "type": "categorical"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.3978207299514853,
+        "value": 85.0,
+        "percentile_in_train": 96.1
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.053328386997974,
+        "value": 3.0,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.8191112021887405,
+        "value": 7.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.44347023886097675,
+        "value": 54.0,
+        "percentile_in_train": 99.6
+      }
+    ]
+  },
+  {
+    "transaction_id": 3540439,
+    "band": "high",
+    "ml_risk_score": 0.9992713471086101,
+    "transaction_amount": 54.225,
+    "top_risk_factors": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": 1.7237979235105487,
+        "type": "categorical"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.4597957486582211,
+        "value": 86.0,
+        "percentile_in_train": 96.1
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.332577994692424,
+        "value": 4.0,
+        "percentile_in_train": 97.4
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.7708077829585793,
+        "value": 9.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "V187",
+        "shap_value": 0.3323701730452234,
+        "value": 4.0,
+        "percentile_in_train": 98.2
+      }
+    ]
+  },
+  {
+    "transaction_id": 3495229,
+    "band": "high",
+    "ml_risk_score": 0.9992651131555889,
+    "transaction_amount": 39.593,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.8662639836534316,
+        "value": 15.0,
+        "percentile_in_train": 99.7
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.2664491416146422,
+        "value": 32.0,
+        "percentile_in_train": 95.3
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.8193323470864523,
+        "value": 6.0,
+        "percentile_in_train": 99.7
+      },
+      {
+        "feature": "C14",
+        "shap_value": 0.7705114738130346,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.6192641570972363,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      }
+    ]
+  },
+  {
+    "transaction_id": 3519778,
+    "band": "high",
+    "ml_risk_score": 0.9992648145546869,
+    "transaction_amount": 175.0,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.4790871236501828,
+        "value": 3.0,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.436888566706167,
+        "value": 8.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7589154430763776,
+        "value": 8.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.7433163242320303,
+        "value": 8.0,
+        "percentile_in_train": 91.1
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.6748333731583387,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3540435,
+    "band": "high",
+    "ml_risk_score": 0.9992488445060467,
+    "transaction_amount": 54.225,
+    "top_risk_factors": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": 1.7735020167455102,
+        "type": "categorical"
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.4509253049000204,
+        "value": 4.0,
+        "percentile_in_train": 97.4
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.3728899654691886,
+        "value": 86.0,
+        "percentile_in_train": 96.1
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.8077332673228778,
+        "value": 8.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.3759739851065459,
+        "value": 54.0,
+        "percentile_in_train": 99.6
+      }
+    ]
+  },
+  {
+    "transaction_id": 3519805,
+    "band": "high",
+    "ml_risk_score": 0.9992175565304101,
+    "transaction_amount": 175.0,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.8386712351225238,
+        "value": 6.0,
+        "percentile_in_train": 98.6
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.0669835621534054,
+        "value": 10.0,
+        "percentile_in_train": 100.0
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.7992666169435804,
+        "value": 10.0,
+        "percentile_in_train": 92.5
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7012081110660042,
+        "value": 10.0,
+        "percentile_in_train": 100.0
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.6357837006873259,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3529001,
+    "band": "high",
+    "ml_risk_score": 0.9992154024506416,
+    "transaction_amount": 54.225,
+    "top_risk_factors": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": 2.006836486505553,
+        "type": "categorical"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.4399354438178957,
+        "value": 85.0,
+        "percentile_in_train": 96.1
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.1643239020276563,
+        "value": 3.0,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.811705437105205,
+        "value": 14.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.42727279117449835,
+        "value": 53.0,
+        "percentile_in_train": 99.6
+      }
+    ]
+  },
+  {
+    "transaction_id": 3540441,
+    "band": "high",
+    "ml_risk_score": 0.9992002443844171,
+    "transaction_amount": 54.225,
+    "top_risk_factors": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": 1.7951804564383336,
+        "type": "categorical"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.4257428876641816,
+        "value": 86.0,
+        "percentile_in_train": 96.1
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.3441549703596236,
+        "value": 4.0,
+        "percentile_in_train": 97.4
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.7723008724098455,
+        "value": 9.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "V187",
+        "shap_value": 0.33054530438142227,
+        "value": 4.0,
+        "percentile_in_train": 98.2
+      }
+    ]
+  },
+  {
+    "transaction_id": 3556658,
+    "band": "high",
+    "ml_risk_score": 0.9991971122755642,
+    "transaction_amount": 300.0,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.6650729723339055,
+        "value": 4.0,
+        "percentile_in_train": 97.4
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.152933805641649,
+        "value": 4.0,
+        "percentile_in_train": 99.6
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7295194020347752,
+        "value": 4.0,
+        "percentile_in_train": 99.6
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.687738627776801,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.6619146070372398,
+        "value": 300.0,
+        "percentile_in_train": 90.7
+      }
+    ]
+  },
+  {
+    "transaction_id": 3519731,
+    "band": "high",
+    "ml_risk_score": 0.9991878884058449,
+    "transaction_amount": 450.0,
+    "top_risk_factors": [
+      {
+        "feature": "V156",
+        "shap_value": 1.4161744571754666,
+        "value": 6.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.9113149186430055,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.8700995753722768,
+        "value": 450.0,
+        "percentile_in_train": 95.5
+      },
+      {
+        "feature": "C14",
+        "shap_value": 0.8365511741296362,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.8156729834559676,
+        "value": 6.0,
+        "percentile_in_train": 99.9
+      }
+    ]
+  },
+  {
+    "transaction_id": 3522631,
+    "band": "high",
+    "ml_risk_score": 0.9991795520435487,
+    "transaction_amount": 66.398,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.7644421126579524,
+        "value": 5.0,
+        "percentile_in_train": 98.2
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.7496128543660021,
+        "value": 330.0,
+        "percentile_in_train": 99.6
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.6934961311594531,
+        "value": 5.0,
+        "percentile_in_train": 99.6
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.3798660071274395,
+        "value": 146.0,
+        "percentile_in_train": 99.7
+      },
+      {
+        "feature": "C7",
+        "shap_value": -0.34123519559338955,
+        "value": 93.0,
+        "percentile_in_train": 99.7
+      }
+    ]
+  },
+  {
+    "transaction_id": 3556851,
+    "band": "high",
+    "ml_risk_score": 0.9991735269786404,
+    "transaction_amount": 300.0,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.7502157055148058,
+        "value": 5.0,
+        "percentile_in_train": 98.2
+      },
+      {
+        "feature": "V156",
+        "shap_value": 1.0666864251576287,
+        "value": 5.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.6829048030278683,
+        "value": 5.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.6605399518828828,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.6265363945732829,
+        "value": 300.0,
+        "percentile_in_train": 90.7
+      }
+    ]
+  },
+  {
+    "transaction_id": 3497974,
+    "band": "high",
+    "ml_risk_score": 0.9991714053903834,
+    "transaction_amount": 30.618,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 2.021511370994709,
+        "value": 13.0,
+        "percentile_in_train": 99.6
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.7114476276820958,
+        "value": 343.0,
+        "percentile_in_train": 99.6
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.9077687823391368,
+        "value": 13.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.5558899303399054,
+        "value": 147.0,
+        "percentile_in_train": 99.7
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.5240768835032515,
+        "value": 147.0,
+        "percentile_in_train": 99.3
+      }
+    ]
+  },
+  {
+    "transaction_id": 3540431,
+    "band": "high",
+    "ml_risk_score": 0.9991680794902079,
+    "transaction_amount": 54.225,
+    "top_risk_factors": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": 1.8247106637547934,
+        "type": "categorical"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.4335582949453192,
+        "value": 85.0,
+        "percentile_in_train": 96.1
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.084140727948672,
+        "value": 3.0,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.7756315769168429,
+        "value": 6.0,
+        "percentile_in_train": 99.7
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.42646722331113956,
+        "value": 54.0,
+        "percentile_in_train": 99.6
+      }
+    ]
+  },
+  {
+    "transaction_id": 3534449,
+    "band": "high",
+    "ml_risk_score": 0.9991609669750726,
+    "transaction_amount": 150.0,
+    "top_risk_factors": [
+      {
+        "feature": "V156",
+        "shap_value": 1.4111548641450828,
+        "value": 6.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "V258",
+        "shap_value": 1.3902517947108621,
+        "value": 3.0,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "id_31",
+        "shap_value": -1.0244195199783872,
+        "type": "categorical"
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7862400741667922,
+        "value": 6.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "C14",
+        "shap_value": 0.7238463035094493,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3510143,
+    "band": "high",
+    "ml_risk_score": 0.9991530954285177,
+    "transaction_amount": 27.051,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 2.0587168303496695,
+        "value": 6.0,
+        "percentile_in_train": 98.6
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.9390437326793397,
+        "value": 46.0,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.37865990619305223,
+        "value": 34.0,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.36075331961200247,
+        "value": 34.0,
+        "percentile_in_train": 99.5
+      },
+      {
+        "feature": "V87",
+        "shap_value": 0.3311805115178077,
+        "value": 6.0,
+        "percentile_in_train": 99.8
+      }
+    ]
+  },
+  {
+    "transaction_id": 3545962,
+    "band": "high",
+    "ml_risk_score": 0.9990696173155317,
+    "transaction_amount": 300.0,
+    "top_risk_factors": [
+      {
+        "feature": "V156",
+        "shap_value": 1.4011697650705528,
+        "value": 3.0,
+        "percentile_in_train": 99.2
+      },
+      {
+        "feature": "V149",
+        "shap_value": 0.7606747410885858,
+        "value": 3.0,
+        "percentile_in_train": 99.2
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.7032586597754467,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "V258",
+        "shap_value": 0.6967843451863411,
+        "value": 2.0,
+        "percentile_in_train": 87.2
+      },
+      {
+        "feature": "C14",
+        "shap_value": 0.6584468400523618,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3472050,
+    "band": "high",
+    "ml_risk_score": 0.9990597730608488,
+    "transaction_amount": 33.261,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 1.9106854633973125,
+        "value": 6.0,
+        "percentile_in_train": 98.6
+      },
+      {
+        "feature": "C1",
+        "shap_value": 1.4521504218647778,
+        "value": 17.0,
+        "percentile_in_train": 94.5
+      },
+      {
+        "feature": "V45",
+        "shap_value": 0.8611472796796389,
+        "value": 7.0,
+        "percentile_in_train": 99.8
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.3985587825877169,
+        "value": 15.0,
+        "percentile_in_train": 94.9
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.38768602668941277,
+        "value": 15.0,
+        "percentile_in_train": 99.3
+      }
+    ]
+  },
+  {
+    "transaction_id": 3540758,
+    "band": "medium",
+    "ml_risk_score": 0.5004099757013921,
+    "transaction_amount": 117.0,
+    "top_risk_factors": [
+      {
+        "feature": "D2",
+        "shap_value": 0.4538864909256329,
+        "value": 2.0,
+        "percentile_in_train": 7.4
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.33843595523074793,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "V70",
+        "shap_value": 0.23145620333142777,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "V314",
+        "shap_value": 0.17931820614383445,
+        "value": 117.0,
+        "percentile_in_train": 90.7
+      },
+      {
+        "feature": "card6",
+        "shap_value": -0.1785613105924861,
+        "type": "categorical"
+      }
+    ]
+  },
+  {
+    "transaction_id": 3503463,
+    "band": "medium",
+    "ml_risk_score": 0.38998621777698017,
+    "transaction_amount": 226.0,
+    "top_risk_factors": [
+      {
+        "feature": "V294",
+        "shap_value": 0.3644420972982703,
+        "value": 3.0,
+        "percentile_in_train": 95.6
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.3561222272590872,
+        "value": 226.0,
+        "percentile_in_train": 86.5
+      },
+      {
+        "feature": "card6",
+        "shap_value": 0.34393645410201446,
+        "type": "categorical"
+      },
+      {
+        "feature": "V317",
+        "shap_value": 0.2890595457291207,
+        "value": 694.0,
+        "percentile_in_train": 97.8
+      },
+      {
+        "feature": "V70",
+        "shap_value": 0.20201447699489103,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3483120,
+    "band": "medium",
+    "ml_risk_score": 0.33937238259296854,
+    "transaction_amount": 213.0,
+    "top_risk_factors": [
+      {
+        "feature": "card6",
+        "shap_value": 0.44616456346712396,
+        "type": "categorical"
+      },
+      {
+        "feature": "V294",
+        "shap_value": 0.32958273291099505,
+        "value": 4.0,
+        "percentile_in_train": 96.8
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.3245511759132116,
+        "value": 2.0,
+        "percentile_in_train": 41.0
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.28075184009475734,
+        "value": 213.0,
+        "percentile_in_train": 85.8
+      },
+      {
+        "feature": "card2",
+        "shap_value": -0.25973533796320264,
+        "value": 555.0,
+        "percentile_in_train": 85.2
+      }
+    ]
+  },
+  {
+    "transaction_id": 3552380,
+    "band": "medium",
+    "ml_risk_score": 0.3752881474791633,
+    "transaction_amount": 226.0,
+    "top_risk_factors": [
+      {
+        "feature": "C13",
+        "shap_value": 0.4332746962746327,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "D2",
+        "shap_value": 0.42845276216073436,
+        "value": 2.0,
+        "percentile_in_train": 7.4
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.2797394008122692,
+        "value": 226.0,
+        "percentile_in_train": 86.5
+      },
+      {
+        "feature": "card1",
+        "shap_value": 0.23591807387759137,
+        "value": 9992.0,
+        "percentile_in_train": 51.4
+      },
+      {
+        "feature": "V70",
+        "shap_value": 0.22550749146334828,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3480853,
+    "band": "medium",
+    "ml_risk_score": 0.4974642267297698,
+    "transaction_amount": 117.0,
+    "top_risk_factors": [
+      {
+        "feature": "D2",
+        "shap_value": 0.30675654443351197,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "card5",
+        "shap_value": 0.1830201997342263,
+        "value": 226.0,
+        "percentile_in_train": 49.0
+      },
+      {
+        "feature": "card6",
+        "shap_value": -0.1529813856746556,
+        "type": "categorical"
+      },
+      {
+        "feature": "V308",
+        "shap_value": 0.14996669746222877,
+        "value": 229.9900054931641,
+        "percentile_in_train": 91.3
+      },
+      {
+        "feature": "day",
+        "shap_value": 0.14353230097861389,
+        "value": 149.0,
+        "percentile_in_train": 100.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3552702,
+    "band": "medium",
+    "ml_risk_score": 0.5823405945765938,
+    "transaction_amount": 280.0,
+    "top_risk_factors": [
+      {
+        "feature": "card6",
+        "shap_value": 0.5085578533236279,
+        "type": "categorical"
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.4116271641488257,
+        "value": 280.0,
+        "percentile_in_train": 90.0
+      },
+      {
+        "feature": "V294",
+        "shap_value": 0.3484372091991241,
+        "value": 8.0,
+        "percentile_in_train": 98.6
+      },
+      {
+        "feature": "M4",
+        "shap_value": -0.24076041671612833,
+        "type": "categorical"
+      },
+      {
+        "feature": "day",
+        "shap_value": 0.2253587043313228,
+        "value": 173.0,
+        "percentile_in_train": 100.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3536130,
+    "band": "medium",
+    "ml_risk_score": 0.7423969618390723,
+    "transaction_amount": 200.0,
+    "top_risk_factors": [
+      {
+        "feature": "V258",
+        "shap_value": 0.7475539991409496,
+        "value": 2.0,
+        "percentile_in_train": 87.2
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.6365058144893128,
+        "value": 3.0,
+        "percentile_in_train": 81.7
+      },
+      {
+        "feature": "V156",
+        "shap_value": 0.6137009354911926,
+        "value": 2.0,
+        "percentile_in_train": 97.8
+      },
+      {
+        "feature": "id_30",
+        "shap_value": -0.4738769392754361,
+        "type": "categorical"
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.4196000464981211,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      }
+    ]
+  },
+  {
+    "transaction_id": 3561461,
+    "band": "medium",
+    "ml_risk_score": 0.37484393432086466,
+    "transaction_amount": 49.676,
+    "top_risk_factors": [
+      {
+        "feature": "DeviceInfo",
+        "shap_value": -0.6527069073914865,
+        "type": "categorical"
+      },
+      {
+        "feature": "R_emaildomain",
+        "shap_value": 0.42089875529689247,
+        "type": "categorical"
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.3767891211266912,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "card1",
+        "shap_value": 0.324707801231639,
+        "value": 9633.0,
+        "percentile_in_train": 49.4
+      },
+      {
+        "feature": "D13",
+        "shap_value": -0.2421056847867175,
+        "value": 4.0,
+        "percentile_in_train": 85.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3549966,
+    "band": "medium",
+    "ml_risk_score": 0.3583705597863214,
+    "transaction_amount": 160.5,
+    "top_risk_factors": [
+      {
+        "feature": "card6",
+        "shap_value": 0.5920344440524968,
+        "type": "categorical"
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.46856380520217533,
+        "value": 160.5,
+        "percentile_in_train": 80.1
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.3292034045069677,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.24569667166428358,
+        "type": "categorical"
+      },
+      {
+        "feature": "M6",
+        "shap_value": -0.23818533403388611,
+        "type": "categorical"
+      }
+    ]
+  },
+  {
+    "transaction_id": 3475484,
+    "band": "medium",
+    "ml_risk_score": 0.3086600628482942,
+    "transaction_amount": 490.0,
+    "top_risk_factors": [
+      {
+        "feature": "C14",
+        "shap_value": 0.7471248667233387,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.567491926207443,
+        "value": 490.0,
+        "percentile_in_train": 95.8
+      },
+      {
+        "feature": "M4",
+        "shap_value": -0.5171962964734113,
+        "type": "categorical"
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.35823594998694824,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.28541275602686456,
+        "type": "categorical"
+      }
+    ]
+  },
+  {
+    "transaction_id": 3470164,
+    "band": "medium",
+    "ml_risk_score": 0.7623545391371316,
+    "transaction_amount": 59.0,
+    "top_risk_factors": [
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.9501377856541826,
+        "type": "categorical"
+      },
+      {
+        "feature": "C2",
+        "shap_value": 0.4272589130924285,
+        "value": 5.0,
+        "percentile_in_train": 84.9
+      },
+      {
+        "feature": "card2",
+        "shap_value": 0.3234303440953317,
+        "value": 321.0,
+        "percentile_in_train": 36.3
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.32164590578360686,
+        "value": 2.0,
+        "percentile_in_train": 66.8
+      },
+      {
+        "feature": "V294",
+        "shap_value": 0.31294605040196977,
+        "value": 2.0,
+        "percentile_in_train": 93.3
+      }
+    ]
+  },
+  {
+    "transaction_id": 3511829,
+    "band": "medium",
+    "ml_risk_score": 0.5485957013457172,
+    "transaction_amount": 687.0,
+    "top_risk_factors": [
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.6418782169141216,
+        "value": 687.0,
+        "percentile_in_train": 97.8
+      },
+      {
+        "feature": "V294",
+        "shap_value": 0.3369145125784225,
+        "value": 4.0,
+        "percentile_in_train": 96.8
+      },
+      {
+        "feature": "day",
+        "shap_value": 0.3030244696780864,
+        "value": 159.0,
+        "percentile_in_train": 100.0
+      },
+      {
+        "feature": "V76",
+        "shap_value": 0.2905651203670636,
+        "value": 3.0,
+        "percentile_in_train": 99.9
+      },
+      {
+        "feature": "C9",
+        "shap_value": 0.2853098070059517,
+        "value": 5.0,
+        "percentile_in_train": 91.5
+      }
+    ]
+  },
+  {
+    "transaction_id": 3521586,
+    "band": "medium",
+    "ml_risk_score": 0.556665146158261,
+    "transaction_amount": 97.0,
+    "top_risk_factors": [
+      {
+        "feature": "V62",
+        "shap_value": 0.43089496402097677,
+        "value": 3.0,
+        "percentile_in_train": 99.5
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": -0.3998705718029612,
+        "type": "categorical"
+      },
+      {
+        "feature": "V294",
+        "shap_value": 0.3752991195872664,
+        "value": 1.0,
+        "percentile_in_train": 88.3
+      },
+      {
+        "feature": "V83",
+        "shap_value": 0.3547856483781585,
+        "value": 3.0,
+        "percentile_in_train": 99.5
+      },
+      {
+        "feature": "V70",
+        "shap_value": 0.25897566546493234,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3545696,
+    "band": "medium",
+    "ml_risk_score": 0.3934571904538117,
+    "transaction_amount": 226.0,
+    "top_risk_factors": [
+      {
+        "feature": "C14",
+        "shap_value": 0.7903254399021167,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.5459213145099888,
+        "value": 226.0,
+        "percentile_in_train": 86.5
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.3500129069021972,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.2740637579217277,
+        "type": "categorical"
+      },
+      {
+        "feature": "D10",
+        "shap_value": -0.2340518753222035,
+        "value": 491.0,
+        "percentile_in_train": 93.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3470601,
+    "band": "medium",
+    "ml_risk_score": 0.45059393805391906,
+    "transaction_amount": 54.5,
+    "top_risk_factors": [
+      {
+        "feature": "D11",
+        "shap_value": -0.5801219415533811,
+        "value": 570.0,
+        "percentile_in_train": 98.7
+      },
+      {
+        "feature": "card2",
+        "shap_value": 0.4642706733304899,
+        "value": 490.0,
+        "percentile_in_train": 65.1
+      },
+      {
+        "feature": "card1",
+        "shap_value": 0.2931364596697833,
+        "value": 12695.0,
+        "percentile_in_train": 67.5
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.27185449224687436,
+        "type": "categorical"
+      },
+      {
+        "feature": "D1",
+        "shap_value": 0.260985135028692,
+        "value": 630.0,
+        "percentile_in_train": 99.9
+      }
+    ]
+  },
+  {
+    "transaction_id": 3543536,
+    "band": "medium",
+    "ml_risk_score": 0.5749352269877906,
+    "transaction_amount": 97.0,
+    "top_risk_factors": [
+      {
+        "feature": "C14",
+        "shap_value": 0.7940839355263053,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.4126746903862826,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "M3",
+        "shap_value": 0.2554571219246284,
+        "type": "categorical"
+      },
+      {
+        "feature": "V70",
+        "shap_value": 0.24256742537186965,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "M5",
+        "shap_value": 0.17292526992344817,
+        "type": "categorical"
+      }
+    ]
+  },
+  {
+    "transaction_id": 3513074,
+    "band": "medium",
+    "ml_risk_score": 0.4570329555452264,
+    "transaction_amount": 117.0,
+    "top_risk_factors": [
+      {
+        "feature": "card6",
+        "shap_value": 0.407832208442732,
+        "type": "categorical"
+      },
+      {
+        "feature": "M9",
+        "shap_value": 0.2878578808239527,
+        "type": "categorical"
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.28492425771045676,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.2398373386599347,
+        "type": "categorical"
+      },
+      {
+        "feature": "card1",
+        "shap_value": 0.2340217551157538,
+        "value": 10104.0,
+        "percentile_in_train": 53.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3551249,
+    "band": "medium",
+    "ml_risk_score": 0.4760707672848758,
+    "transaction_amount": 117.0,
+    "top_risk_factors": [
+      {
+        "feature": "C13",
+        "shap_value": -0.6440812011356152,
+        "value": 58.0,
+        "percentile_in_train": 93.2
+      },
+      {
+        "feature": "card1",
+        "shap_value": 0.608881331821939,
+        "value": 9500.0,
+        "percentile_in_train": 46.8
+      },
+      {
+        "feature": "card2",
+        "shap_value": 0.4938055957447869,
+        "value": 321.0,
+        "percentile_in_train": 36.3
+      },
+      {
+        "feature": "C6",
+        "shap_value": 0.42414661390387803,
+        "value": 3.0,
+        "percentile_in_train": 80.9
+      },
+      {
+        "feature": "C2",
+        "shap_value": 0.3023750616001419,
+        "value": 4.0,
+        "percentile_in_train": 80.3
+      }
+    ]
+  },
+  {
+    "transaction_id": 3511065,
+    "band": "medium",
+    "ml_risk_score": 0.6928779029880886,
+    "transaction_amount": 280.0,
+    "top_risk_factors": [
+      {
+        "feature": "C13",
+        "shap_value": 0.5369109784362739,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "C14",
+        "shap_value": 0.48812688723094905,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.37848003530507085,
+        "value": 280.0,
+        "percentile_in_train": 90.0
+      },
+      {
+        "feature": "card6",
+        "shap_value": 0.29649306416868926,
+        "type": "categorical"
+      },
+      {
+        "feature": "V70",
+        "shap_value": 0.28411970520198404,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3518634,
+    "band": "medium",
+    "ml_risk_score": 0.35566283509091284,
+    "transaction_amount": 77.0,
+    "top_risk_factors": [
+      {
+        "feature": "C13",
+        "shap_value": 0.5575624321364715,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.3050797018956792,
+        "value": 2.0,
+        "percentile_in_train": 66.8
+      },
+      {
+        "feature": "M4",
+        "shap_value": -0.20726699206376423,
+        "type": "categorical"
+      },
+      {
+        "feature": "V70",
+        "shap_value": 0.1863039032251001,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      },
+      {
+        "feature": "D15",
+        "shap_value": 0.18575220061867503,
+        "value": 0.0,
+        "percentile_in_train": 0.0
+      }
+    ]
+  },
+  {
+    "transaction_id": 3569332,
+    "band": "medium",
+    "ml_risk_score": 0.5447064812099967,
+    "transaction_amount": 87.0,
+    "top_risk_factors": [
+      {
+        "feature": "addr1",
+        "shap_value": 0.45836927826888707,
+        "value": 498.0,
+        "percentile_in_train": 97.2
+      },
+      {
+        "feature": "C9",
+        "shap_value": 0.40250016863500654,
+        "value": 10.0,
+        "percentile_in_train": 95.2
+      },
+      {
+        "feature": "dist1",
+        "shap_value": 0.286019883575796,
+        "value": 285.0,
+        "percentile_in_train": 89.9
+      },
+      {
+        "feature": "V54",
+        "shap_value": 0.27287461359288134,
+        "value": 2.0,
+        "percentile_in_train": 98.1
+      },
+      {
+        "feature": "V53",
+        "shap_value": 0.24453280324004148,
+        "value": 2.0,
+        "percentile_in_train": 99.3
+      }
+    ]
+  },
+  {
+    "transaction_id": 3574617,
+    "band": "medium",
+    "ml_risk_score": 0.3461302432253157,
+    "transaction_amount": 884.0,
+    "top_risk_factors": [
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.5623991624841702,
+        "value": 884.0,
+        "percentile_in_train": 98.4
+      },
+      {
+        "feature": "M4",
+        "shap_value": -0.28277161600970874,
+        "type": "categorical"
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.2742642670698977,
+        "value": 4.0,
+        "percentile_in_train": 87.4
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.2729133322959873,
+        "type": "categorical"
+      },
+      {
+        "feature": "M5",
+        "shap_value": 0.23948971084717208,
+        "type": "categorical"
+      }
+    ]
+  },
+  {
+    "transaction_id": 3559153,
+    "band": "medium",
+    "ml_risk_score": 0.49914059765658103,
+    "transaction_amount": 117.0,
+    "top_risk_factors": [
+      {
+        "feature": "C13",
+        "shap_value": 0.3602894310940543,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "M5",
+        "shap_value": 0.32719431807911603,
+        "type": "categorical"
+      },
+      {
+        "feature": "card2",
+        "shap_value": 0.28872903352499973,
+        "value": 490.0,
+        "percentile_in_train": 65.1
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.2796610900337679,
+        "type": "categorical"
+      },
+      {
+        "feature": "M6",
+        "shap_value": 0.27834519090975435,
+        "type": "categorical"
+      }
+    ]
+  },
+  {
+    "transaction_id": 3471192,
+    "band": "medium",
+    "ml_risk_score": 0.7992964959466066,
+    "transaction_amount": 1104.0,
+    "top_risk_factors": [
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.562912409903317,
+        "value": 1104.0,
+        "percentile_in_train": 99.0
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.5164671163751722,
+        "value": 1.0,
+        "percentile_in_train": 6.1
+      },
+      {
+        "feature": "C11",
+        "shap_value": 0.5130507702234091,
+        "value": 3.0,
+        "percentile_in_train": 81.7
+      },
+      {
+        "feature": "day",
+        "shap_value": 0.3190633654991773,
+        "value": 145.0,
+        "percentile_in_train": 100.0
+      },
+      {
+        "feature": "V315",
+        "shap_value": -0.3049417430672168,
+        "value": 1541.0,
+        "percentile_in_train": 99.9
+      }
+    ]
+  },
+  {
+    "transaction_id": 3520083,
+    "band": "medium",
+    "ml_risk_score": 0.3562554903739794,
+    "transaction_amount": 226.0,
+    "top_risk_factors": [
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.5313842964027671,
+        "value": 226.0,
+        "percentile_in_train": 86.5
+      },
+      {
+        "feature": "V281",
+        "shap_value": 0.3241926348873546,
+        "value": 1.0,
+        "percentile_in_train": 95.2
+      },
+      {
+        "feature": "D15",
+        "shap_value": 0.25789279439789176,
+        "value": 13.0,
+        "percentile_in_train": 41.8
+      },
+      {
+        "feature": "P_emaildomain",
+        "shap_value": 0.25133419294586984,
+        "type": "categorical"
+      },
+      {
+        "feature": "V289",
+        "shap_value": -0.22223460027331557,
+        "value": 4.0,
+        "percentile_in_train": 99.6
+      }
+    ]
+  }
+]

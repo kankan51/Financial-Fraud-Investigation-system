@@ -1,0 +1,46 @@
+# Secrets - never commit these
+.env
+*.key
+secrets.*
+
+# Dataset (Kaggle terms: don't redistribute) and large artifacts
+data/
+*.csv
+*.parquet
+*.feather
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.lgb
+*.cbm
+fraud_model.txt
+
+# Keep the model comparison table (exception to *.csv above)
+!model_comparison_results.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+*.egg-info/
+catboost_info/
+
+# Drafts, exports, archives and personal docs (README replaces these)
+*.ipynb
+*.zip
+*.docx
+Claude.pdf
+Fraud Investigation Agent _PDF.pdf
+Fraud Investigation Agent.md
+Fraud Investigation System*.md
+*copy.html
+*Copy*.html
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
